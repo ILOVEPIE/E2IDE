@@ -1,5 +1,20 @@
+Benifits of E2IDE
+
+- No losing e2s to bad connections
+- No confusing descriptions of methods
+- Easily extensible
+- Premade E2 Utility librarys
+- E2 Debug Emulator: find out what's wrong with your e2s without trial and error
+
+E2IDE is a fork of the old E2Edit project by "itsbth".
+
+----------------------------
+OLD E2Edit README:
+----------------------------
+
 E2Edit
 
 E2Edit depends on AvalonEdit, AvalonDock and Ookii.Dialogs.
 Checkout SharpDevelop from svn://svnmirror.sharpdevelop.net/sharpdevelop/trunk/SharpDevelop, compile and copy AvalonDock.dll and ICSharpCode.AvalonEdit.dll to Libs.
 Download Ookii.Dialogs from http://www.ookii.org/software/dialogs/ and copy Ookii.Dialogs.Wpf.dll to Libs.
+
