@@ -7,13 +7,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml;
-using E2Edit.Editor;
-using E2Edit.Resources;
+using E2IDE.Editor;
+using E2IDE.Resources;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using Ookii.Dialogs.Wpf;
 
-namespace E2Edit
+namespace E2IDE
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -130,15 +130,16 @@ namespace E2Edit
             {
                 _editor.Open(item.Path);
                 _currentFile = item.Path;
-                Title = item.Name + " - E2Edit";
+                Title = item.Name + " - E2IDE";
             }
         }
 
         private bool ShouldSave()
         {
+            if (_editor == null) return false;
             if (!_editor.IsModified) return true;
             MessageBoxResult result =
-                MessageBox.Show(Properties.Resources.MainWindow_ShouldSave_Save_changes_to_the_current_file, "E2Edit",
+                MessageBox.Show(Properties.Resources.MainWindow_ShouldSave_Save_changes_to_the_current_file, "E2IDE",
                                 MessageBoxButton.YesNoCancel);
             switch (result)
             {
@@ -214,6 +215,11 @@ namespace E2Edit
             _currentFile = Settings.SteamPath + fname;
             Save();
             UpdateFileList(Settings.SteamPath);
+        }
+
+        private void mainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="E2Edit.MainWindow"
+﻿<Window x:Class="E2IDE.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ui="clr-namespace:E2Edit"
-        xmlns:Editor="clr-namespace:E2Edit.Editor" Name="mainWindow"
-        Title="E2Edit" Height="350" Width="525"
+        xmlns:ui="clr-namespace:E2IDE"
+        xmlns:Editor="clr-namespace:E2IDE.Editor" Name="mainWindow"
+        Title="E2IDE" Height="350" Width="525"
         WindowStyle="None" AllowsTransparency="True"
-        Background="Transparent" ResizeMode="CanResizeWithGrip">
+        Background="Transparent" ResizeMode="CanResizeWithGrip" Loaded="mainWindow_Loaded">
     <Window.Resources>
         <Storyboard x:Key="SideBarAnimIn">
             <DoubleAnimation Storyboard.TargetName="_fileList" Storyboard.TargetProperty="Width" From="0" To="150" />

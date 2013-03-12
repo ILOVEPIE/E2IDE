@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace E2Edit.Editor
+namespace E2IDE.Editor
 {
     internal class E2Parser
     {

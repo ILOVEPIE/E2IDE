@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("E2Edit")]
+[assembly: AssemblyTitle("E2IDE")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("E2Edit")]
-[assembly: AssemblyCopyright("Copyright © ITSBTH 2010")]
+[assembly: AssemblyProduct("E2IDE")]
+[assembly: AssemblyCopyright("Copyleft ITSBTH 2010, Copyleft ILOVEPIE 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

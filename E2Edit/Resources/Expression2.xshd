@@ -1,22 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SyntaxDefinition name="Expression2"
         xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <Color name="Comment" foreground="#808080" />
-  <Color name="String" foreground="#808080" />
-  <Color name="Keyword" foreground="#A0F0F0" fontWeight="bold" />
+  <!--
+  ["directive"] = Color(240, 240, 160),  yellow
+	["number"]    = Color(240, 160, 160),  light red
+	["function"]  = Color(160, 160, 240),  blue
+	["notfound"]  = Color(240,  96,  96),  dark red
+	["variable"]  = Color(160, 240, 160),  light green
+	["string"]    = Color(128, 128, 128),  grey
+	["keyword"]   = Color(160, 240, 240),  turquoise
+	["operator"]  = Color(224, 224, 224),  white
+	["comment"]   = Color(128, 128, 128),  grey
+	["ppcommand"] = Color(240,  96, 240),  purple
+	["typename"]  = Color(240, 160,  96),  orange
+	["constant"]  = Color(240, 160, 240),  pink
+	["userfunction"] = Color(102, 122, 102),  dark green
+  -->
   <Color name="Directive" foreground="#F0F0A0" />
   <Color name="Number" foreground="#F0A0A0" />
+  <Color name="Function" foreground="#A0A0F0" />
+  <Color name="Unknown" foreground="#F06060" />
   <Color name="Variable" foreground="#A0F0A0" />
-  <Color name="Type" foreground="#FF8C00" />
+  <Color name="String" foreground="#808080" />
+  <Color name="Include" foreground="#A0F0F0" />
+  <Color name="Keyword" foreground="#A0F0F0" fontWeight="bold" />
+  <Color name="Operator" foreground="#F4F4F4" />
+  <Color name="Comment" foreground="#808080" />
+  <Color name="Ppcommand" foreground="#F060F0" />
+  <Color name="Typename" foreground="#F0A060" />
+  <Color name="Constant" foreground="#F0A0F0" />
+  <Color name="Userfunction" foreground="#667A66" />
+  
+  
 
   <!-- This is the main ruleset. -->
   <RuleSet>
-    <Span begin="#" color="Comment" />
+    
+    <Span begin="#include" color="Include">
+      <RuleSet>
+        <Span color="String">
+          <Begin>"</Begin>
+          <End>"</End>
+          <RuleSet>
+            <!-- nested span for escape sequences -->
+            <Span begin="\\" end="." />
+          </RuleSet>
+        </Span>
+        <Rule color="Unknown">
+          .
+        </Rule>
+      </RuleSet>
+    </Span>
+    
+    <Span begin="#ifdef" color="Ppcommand">
+      <RuleSet>
+        <Rule color="Typename">
+          (vector|angle|entity|wirelink|normal|quaternion|array|table)(?=:)
+        </Rule>
+        <Rule color="Function">
+          (?&lt;=:)[a-z][a-zA-Z]*?(?=\()
+        </Rule>
+        <Rule color="Typename">
+          (?&lt;=[\(,])(vector|angle|entity|wirelink|normal|quaternion|array|table)(?=[\),])
+        </Rule>
+        <Rule color="Operator">
+          [\[\]\{\}\(\)/\+\-\*&amp;\|\^%\.:=!\?&lt;&gt;,]
+        </Rule>
+        <Rule color="Unknown">
+          .
+        </Rule>
+      </RuleSet>
+    </Span>
 
+    <Span begin="#else" color="Ppcommand"/>
+
+    <Span begin="#endif" color="Ppcommand"/>
+    
+    <Span begin="#" color="Comment" />
     <Span begin="@(name|model)" color="Directive" />
     <Span begin="@(inputs|outputs|trigger|persist)" color="Directive">
       <RuleSet>
-        <Rule color="Type">
+        <Rule color="Typename">
           (?!:)(vector|angle|entity|wirelink|normal|quaternion|array|table)
         </Rule>
         <Rule color="Variable">
@@ -33,6 +97,7 @@
         <Span begin="\\" end="." />
       </RuleSet>
     </Span>
+    
 
     <Keywords color="Keyword">
       <Word>if</Word>
@@ -42,9 +107,12 @@
       <Word>while</Word>
       <Word>break</Word>
       <Word>continue</Word>
+      <Word>switch</Word>
+      <Word>case</Word>
+      <Word>function</Word>
     </Keywords>
 
-    <Rule color="Type">
+    <Rule color="Typename">
       (?=\[.*,)(entity|angle|vector)(?&lt;=\])
     </Rule>
 

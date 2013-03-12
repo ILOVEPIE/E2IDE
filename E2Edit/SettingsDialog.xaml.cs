@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
 
-namespace E2Edit
+namespace E2IDE
 {
     /// <summary>
     /// Interaction logic for SettingsDialog.xaml

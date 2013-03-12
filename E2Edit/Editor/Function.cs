@@ -10,13 +10,13 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.TextFormatting;
 using System.Xml.Serialization;
-using E2Edit.Resources;
+using E2IDE.Resources;
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Editing;
 using ICSharpCode.AvalonEdit.Snippets;
 
-namespace E2Edit.Editor
+namespace E2IDE.Editor
 {
     public enum DataType
     {

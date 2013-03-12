@@ -7,14 +7,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using E2Edit.Resources;
+using E2IDE.Resources;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Snippets;
 
-namespace E2Edit.Editor
+namespace E2IDE.Editor
 {
     internal sealed class E2Editor : UserControl
     {

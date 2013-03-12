@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 
-namespace E2Edit
+namespace E2IDE
 {
     /// <summary>
     /// Interaction logic for SaveAsDialog.xaml

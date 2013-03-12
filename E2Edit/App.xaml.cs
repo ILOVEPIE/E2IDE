@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace E2Edit
+namespace E2IDE
 {
     /// <summary>
     /// Interaction logic for App.xaml

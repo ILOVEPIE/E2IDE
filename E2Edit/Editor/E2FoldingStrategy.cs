@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Folding;
 
-namespace E2Edit.Editor
+namespace E2IDE.Editor
 {
     class E2FoldingStrategy : AbstractFoldingStrategy
     {

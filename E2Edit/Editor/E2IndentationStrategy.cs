@@ -2,7 +2,7 @@
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Indentation;
 
-namespace E2Edit.Editor
+namespace E2IDE.Editor
 {
     internal class E2IndentationStrategy : DefaultIndentationStrategy
     {

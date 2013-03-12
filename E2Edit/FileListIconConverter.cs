@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 
-namespace E2Edit
+namespace E2IDE
 {
     [ValueConversion(typeof(FileListItem), typeof(UIElement))]
     class FileListIconConverter : IValueConverter

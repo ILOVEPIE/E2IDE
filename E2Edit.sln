@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2Edit", "E2Edit\E2Edit.csproj", "{EE9193E8-6415-4910-9434-7AC54AEB6759}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2IDE", "E2Edit\E2IDE.csproj", "{EE9193E8-6415-4910-9434-7AC54AEB6759}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2ParserTest", "E2ParserTest\E2ParserTest.csproj", "{131C1574-DF19-494A-8127-E5D43A4F27FA}"
 EndProject

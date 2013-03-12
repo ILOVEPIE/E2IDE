@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 
-namespace E2Edit.Resources
+namespace E2IDE.Resources
 {
     internal static class Resource
     {
@@ -18,7 +18,7 @@ namespace E2Edit.Resources
         private static IEnumerable<ResourceNode> LoadNodes()
         {
             Stream resourceManifest =
-                Assembly.GetExecutingAssembly().GetManifestResourceStream("E2Edit.Resources.Resources.xml");
+                Assembly.GetExecutingAssembly().GetManifestResourceStream("E2IDE.Resources.Resources.xml");
             if (resourceManifest == null) throw new FileNotFoundException("Resource manifest not found.");
             return
                 (IEnumerable<ResourceNode>)
