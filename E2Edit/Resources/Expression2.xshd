@@ -81,7 +81,7 @@
     <Span begin="@(inputs|outputs|trigger|persist)" color="Directive">
       <RuleSet>
         <Rule color="Typename">
-          (?!:)(vector|angle|entity|wirelink|normal|quaternion|array|table)
+          (?!:)(vector|angle|entity|wirelink|normal|quaternion|array|table|string)
         </Rule>
         <Rule color="Variable">
           \b[A-Z][A-Za-z0-9]*
